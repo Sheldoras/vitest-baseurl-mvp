@@ -6,10 +6,14 @@ defineProps<{ msg: string }>()
 
 const count = ref(0)
 const baseUrl = import.meta.env.BASE_URL
+const mode = import.meta.env.MODE
+const prod = import.meta.env.PROD
 </script>
 
 <template>
   <h1>{{ baseUrl }}</h1>
+  <h2>{{ mode }}</h2>
+  <h3>{{ prod }}</h3>
 
   <div class="card">
     <button type="button" @click="count++">count is {{ count }}</button>
